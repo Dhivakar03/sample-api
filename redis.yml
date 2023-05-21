@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-    name: redis-web
+    name: redis
 spec:
     serviceName: redis-svc
     replicas: 1
@@ -20,8 +20,8 @@ spec:
                 - name: REDIS_PASSWORD
                   valueFrom:
                     secretKeyRef:
-                        name: cmVkaXMtcGFzc3dvcmQ=
-                        key: cmVkaXMtcGFzc3dvcmQ=
+                        name: redis-password
+                        key: redis-password
               ports:
               - containerPort: 6379
                 name: redis-port
