@@ -20,8 +20,8 @@ spec:
                 - name: REDIS_PASSWORD
                   valueFrom:
                     secretKeyRef:
-                        name: redis-password
-                        key: redis-password
+                        name: cmVkaXMtcGFzc3dvcmQ=
+                        key: cmVkaXMtcGFzc3dvcmQ=
               ports:
               - containerPort: 6379
                 name: redis-port
